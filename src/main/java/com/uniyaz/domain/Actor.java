@@ -1,7 +1,7 @@
 package com.uniyaz.domain;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "actor")
@@ -18,7 +18,7 @@ public class Actor extends BaseEntity {
     private String lastName;
     @Basic
     @Column(name = "last_update")
-    private Timestamp lastUpdate;
+    private Date lastUpdate;
 
     public Long getId() {
         return Id;
@@ -44,11 +44,11 @@ public class Actor extends BaseEntity {
         this.lastName = lastName;
     }
 
-    public Timestamp getLastUpdate() {
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Timestamp lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 
